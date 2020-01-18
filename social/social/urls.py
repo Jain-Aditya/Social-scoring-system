@@ -23,4 +23,5 @@ urlpatterns = [
     path('manager-login',managerLogin,name='manager-login-url'),
     path('customer-login',customerLogin,name='customer-login-url'),
     path('customer-details',customerDetails,name='customer-detail-url'),
+    path('acknowledgement', acknowledgement,name = 'acknowledgement-url')
 ]

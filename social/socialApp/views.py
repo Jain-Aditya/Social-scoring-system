@@ -23,7 +23,6 @@ def customerDetails(request):
     response = response.json()
     customer_data = {'name': response[0]['name'],'dob':response[0]['dob'],'uid':response[0]['uid'],'loan':100000,'Score':-1324.75}
 
-    customer_transactions={'traffic-challan'}
     return render(
         request,
         template_name='customerdetails.html',
@@ -35,3 +34,6 @@ def customerLogin(request):
         template_name='customerlogin.html',
         content_type={},
     )
+
+def acknowledgement(request):
+    return "<h1>Sent successfully</h1>"

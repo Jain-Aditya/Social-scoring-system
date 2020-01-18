@@ -15,8 +15,10 @@ table, th, td {
 }
 </style>
 <body>
-    <h1>Customer details</h1>
-<table >
+    <center><h1>Customer details</h1>
+    <h2>Enter loan amount, mobile, email</h2>
+    </center>
+<table align = "center" >
     <tr>
         <td>Name </td>
         <td>{{ name }}</td>
@@ -29,29 +31,26 @@ table, th, td {
         <td>UID </td>
         <td>{{ uid }}</td>
     </tr>
+
+
+    <form action = "{% url 'acknowledgement-url' %}" method = "POST">
+        {% csrf_token %}
     <tr>
         <td>LOAN </td>
-        <td>namedata</td>
+        <td><input type = "text"></td>
     </tr>
     <tr>
-        <td>Score </td>
-        <td>namedata</td>
+        <td>Mobile</td>
+        <td><input type = "text"></td>
     </tr>
-
-
+    <tr>
+        <td>Email</td>
+        <td><input type = "text"></td>
+    </tr>
 </table>
-<br>
-<table>
-    <tr>
-        <th>Parameter</th>
-        <th>Currency</th>
-    </tr>
+<input type = "Submit" value = "Submit">
+</form>
+</body>
 
-    <tr>
-        <td>para</td>
-        <td>values</td>
-    </tr>
-
-</table>
 </body>
 </html>
