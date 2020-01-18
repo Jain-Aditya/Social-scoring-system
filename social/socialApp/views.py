@@ -36,4 +36,4 @@ def customerLogin(request):
     )
 
 def acknowledgement(request):
-    return "<h1>Sent successfully</h1>"
+    pass

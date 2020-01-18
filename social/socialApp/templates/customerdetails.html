@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
+    
 <style>
 table, th, td {
   border: 1px solid black;
 }
 </style>
+</head>
 <body>
     <center><h1>Customer details</h1>
     <h2>Enter loan amount, mobile, email</h2>
@@ -33,8 +34,8 @@ table, th, td {
     </tr>
 
 
-    <form action = "{% url 'acknowledgement-url' %}" method = "POST">
-        {% csrf_token %}
+<form action = "{% url 'acknowledgement-url' %}" method = "POST" enctype = "text/plain">
+    {% csrf_token %}
     <tr>
         <td>LOAN </td>
         <td><input type = "text"></td>
@@ -47,10 +48,12 @@ table, th, td {
         <td>Email</td>
         <td><input type = "text"></td>
     </tr>
-</table>
-<input type = "Submit" value = "Submit">
+    <button type="submit">submit</button>
 </form>
-</body>
+</table>
+
+
+
 
 </body>
 </html>
