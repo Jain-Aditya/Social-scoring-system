@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Manager</h1>
+
+<form action="/action_page.php" method="post">
+  <div class="imgcontainer">
+    <img style = "height : 100px; width : 100px" src="data:image/png;base64,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" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+</body>
+</html>

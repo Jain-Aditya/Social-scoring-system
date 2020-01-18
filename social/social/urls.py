@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home,name='home-url'),
     path('manager-login',managerLogin,name='manager-login-url'),
-    path('customer-login',customerLogin,name='customer-login-url')
+    path('customer-login',customerLogin,name='customer-login-url'),
+    path('customer-details',customerDetails,name='customer-detail-url'),
 ]
