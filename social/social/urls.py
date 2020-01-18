@@ -19,5 +19,7 @@ from socialApp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home,name='home-url')
+    path('',home,name='home-url'),
+    path('manager-login',managerLogin,name='manager-login-url'),
+    path('customer-login',customerLogin,name='customer-login-url')
 ]
